@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form th:object="${city}" th:action="@{/edit}" method="post">
+<label>
+    <input type="hidden" th:field="*{id}" name="id">
+</label>
+<table>
+    <tr>
+        <td>Name</td>
+        <td>
+            <label>
+                <input th:field="*{tenThanhpho}" type="text">
+            </label>
+        </td>
+    </tr>
+    <tr>
+        <td>Country</td>
+        <td>
+            <label>
+                <input th:field="*{country}" type="text">
+            </label>
+        </td>
+    </tr>
+    <tr>
+        <td>Mo ta </td>
+        <td>
+            <label>
+                <input th:field="*{motavethanhPho}" type="text">
+            </label>
+        </td>
+    </tr>
+    <tr>
+        <td>Dan so</td>
+        <td>
+            <label>
+                <input th:field="*{danSo}" type="text">
+            </label>
+        </td>
+    </tr>
+    <tr>
+        <td>Dien tich</td>
+        <td>
+            <label>
+                <input th:field="*{dienTich}" type="text">
+            </label>
+        </td>
+    </tr>
+     <tr>
+        <td>GPD</td>
+        <td>
+            <label>
+                <input th:field="*{GDP}" type="text">
+            </label>
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            <label>
+                <input type="submit" value="Update">
+            </label>
+        </td>
+    </tr>
+
+</table>
+
+</form>
+</body>
+</html>

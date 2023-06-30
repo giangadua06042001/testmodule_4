@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form th:object="${city}" th:action="@{/delete}" method="post">
+<label>
+    <input type="hidden" th:field="*{id}" name="id">
+</label>
+<table>
+    <tr>
+        <td>Ten thanh pho</td>
+        <td th:text="${city.tenThanhpho}"> </td>
+    </tr>
+    <tr>
+        <td>
+            <label>
+                <input type="submit" value="Delete">
+            </label>
+        </td>
+        <td>
+            <label>
+                <a href="@{}" >Thoat</a>
+            </label>
+        </td>
+    </tr>
+
+</table>
+
+</form>
+
+</body>
+</html>

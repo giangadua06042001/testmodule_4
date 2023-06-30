@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<p>
+    <a href="/">Go to list</a>
+</p>
+<th:block th:if="${message}">
+    <p th:text="${message}"></p>
+</th:block>
+<form th:object="${city}" th:action="@{/create}" method="post">
+    <table>
+        <tr>
+            <td>Tên thành Phố:</td>
+            <td>
+                <label><input th:field="*{tenThanhpho}"></label>
+            </td>
+        </tr>
+        <tr>
+            <td>Tên quốc gia</td>
+            <td>
+                <label>
+                    <input th:href="*{tenThanhpho}">
+                </label>
+            </td>
+        </tr>
+        <tr>
+            <td>Diện tích</td>
+            <td>
+                <label>
+                    <input th:href="*{dienTich}">
+                </label>
+            </td>
+        </tr>
+         <tr>
+            <td>Dân số</td>
+            <td>
+                <label>
+                    <input th:href="*{danSo}">
+                </label>
+            </td>
+        </tr>
+         <tr>
+            <td>GDP</td>
+            <td>
+                <label>
+                    <input th:href="*{GDP}">
+                </label>
+            </td>
+        </tr>
+         <tr>
+            <td>Mô tả</td>
+            <td>
+                <label>
+                    <input th:href="*{motavethanhPho}">
+                </label>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <button type="submit">Submit</button>
+            </td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>
